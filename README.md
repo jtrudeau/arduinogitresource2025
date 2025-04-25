@@ -12,8 +12,8 @@ This repository is designed to help you learn and practice Git fundamentals whil
 
 ### Step 1: Clone this repository
 ```bash
-git clone <repository-url>
-cd git-learning-repository
+git clone https://github.com/jtrudeau/arduinogitresource2025.git
+cd arduinogitresource2025
 ```
 
 ### Step 2: Create your own repository

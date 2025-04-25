@@ -122,7 +122,7 @@ This is important for teams collaborating on a single project repository. When e
    git checkout -b your-name
    ```
 
-3. Add a file called `feedback.md` with positive feedback formatted with headings and lists
+3. Add a file called `feedback.md` with dummy feedback formatted with headings and lists
    ```bash
    # Create and edit the file in VS Code
    ```
@@ -187,15 +187,8 @@ This is important for teams collaborating on a single project repository. When e
 
 1. Use `git log` to view your commit history
    ```bash
-   git log
-   
-   # Show compact history
-   git log --oneline
-   
-   # Show with graph
-   git log --oneline --graph
-   ```
-
+   git log 
+  
 2. Find a specific commit and copy its hash
    ```bash
    git log --oneline
@@ -208,10 +201,7 @@ This is important for teams collaborating on a single project repository. When e
    ```
 
 4. Create a file called `history_exploration.md` with your observations using markdown formatting
-   ```bash
-   # Create and edit the file in VS Code
-   code history_exploration.md
-   ```
+
 
 5. Commit and push this file
    ```bash
@@ -294,9 +284,9 @@ This is important for teams collaborating on a single project repository. When e
 1. Create comprehensive documentation for your project
    ```bash
    # In VS Code, edit or create these files:
-   code README.md         # Main project documentation
-   code HARDWARE.md       # Hardware components list
-   code SETUP.md          # Setup instructions
+   README.md         # Main project documentation
+   HARDWARE.md       # Hardware components list and specifications
+   SETUP.md          # Setup and build instructions
    ```
 
 2. Use markdown features effectively:
@@ -317,7 +307,7 @@ This is important for teams collaborating on a single project repository. When e
 1. Create a data logger based on our example
    ```bash
    # Copy the sample files to your project
-   cp -r ../templates/sample_project/datalogger.ino ./src/
+   cp -r ../templates/sample_project/datalogger.ino ./
    
    # Open the project in VS Code
    code .
@@ -331,8 +321,8 @@ This is important for teams collaborating on a single project repository. When e
 
 3. Document your changes
    ```bash
-   # Update or create documentation in VS Code
-   code README.md
+   # Create documentation in VS Code
+   datalogger_doc.md
    ```
 
 4. Commit and push your changes
