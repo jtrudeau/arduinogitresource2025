@@ -69,15 +69,8 @@ git init
 
 ### 4. Create Your First File
 
-Create a file called `README.md` with some content:
+Create a file called `README.md` with some content.
 
-```bash
-# Windows
-echo # My First Git Project > README.md
-
-# macOS/Linux
-echo "# My First Git Project" > README.md
-```
 
 ### 5. Make Your First Commit
 
@@ -162,8 +155,10 @@ git push
 For your Arduino project, create the following files:
 
 1. **README.md**: Explain what your project does and how to use it
-2. **HARDWARE.md**: List all the components needed
-3. **CODE.md**: Explain how your code works with code snippets
+2. **HARDWARE.md**: List all the components used and document with descriptions
+3. **CODE.md**: Describe the build process and explain how your code works using code snippets
+
+Make sure to also to include your `*.ino` code files.
 
 ## Using Markdown for Documentation
 
@@ -181,6 +176,7 @@ Markdown is a simple formatting syntax that makes your documentation look good. 
 - Use `git --help` for general help
 - Use `git <command> --help` for help with a specific command
 - Refer to the resources in the main README.md
+- When all else fails ask an LLM for help but do not rely on it as a primary source of help to do the work!
 
 ## Common Issues
 
