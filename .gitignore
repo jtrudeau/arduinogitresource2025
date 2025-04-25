@@ -34,3 +34,8 @@ yarn-error.log*
 *.tmp
 *.swp
 *.swo 
+
+# My files not shared with the students
+
+Instructions.md
+

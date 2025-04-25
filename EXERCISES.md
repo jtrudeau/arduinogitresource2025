@@ -6,14 +6,17 @@ Complete these exercises to practice your Git skills. Each exercise builds on th
 
 1. Create a new file called `about_me.md`
    ```bash
-   # Use your favorite text editor to create the file, or:
-   echo "# About Me" > about_me.md
+   # Open VS Code in the current directory
+   code .
+   
+   # Create and edit the file in VS Code
+   # Click "New File" and name it "about_me.md"
    ```
 
 2. Add your name and one interesting fact about yourself using markdown formatting
    ```bash
-   # Edit the file with your information
-   nano about_me.md  # or use any text editor
+   # In VS Code, add your information to about_me.md
+   # Save the file with Ctrl+S (or Cmd+S on Mac)
    ```
 
 3. Stage the file
@@ -35,8 +38,11 @@ Complete these exercises to practice your Git skills. Each exercise builds on th
 
 1. Edit `about_me.md` to add the Arduino (C++) programming language with a heading and a code sample
    ```bash
-   # Edit the file using any text editor
-   nano about_me.md
+   # Open the file in VS Code
+   code about_me.md
+   
+   # Or if VS Code is already open, find and edit the file
+   # Add a code block with Arduino example
    ```
 
 2. Stage the changes
@@ -54,76 +60,61 @@ Complete these exercises to practice your Git skills. Each exercise builds on th
    git push origin main
    ```
 
-## Exercise 3: Branching
+## Exercise 3: Branching and Merging
 
-This is most important for groups working on multiple features (e.g., separate code files for different sensors during your testing).
+This exercise demonstrates how to use branches for developing features independently. This is important for working on multiple features at once or when collaborating with a team.
 
-1. Create a new branch called `new-feature`
+1. Create and switch to a new branch for your feature
    ```bash
-   git branch new-feature
+   # Create and switch to a new branch in one command
+   git checkout -b feature-branch
    ```
 
-2. Switch to the new branch
+2. Create a file called `goals.md` with three learning goals as a bulleted list
    ```bash
-   git checkout new-feature
-   ```
+   # Open VS Code to create the file
+   code goals.md
    
-   Or do both in one command:
-   ```bash
-   git checkout -b new-feature
+   # Add your content and save
    ```
 
-3. Create a file called `goals.md` with three learning goals as a bulleted list
-   ```bash
-   # Create and edit the file
-   nano goals.md
-   ```
-
-4. Stage and commit the file
+3. Stage and commit the file
    ```bash
    git add goals.md
    git commit -m "Add learning goals file"
    ```
 
-5. Push the branch to GitHub
+4. Push the branch to GitHub
    ```bash
-   git push -u origin new-feature
+   git push -u origin feature-branch
    ```
-   Note: `-u` sets up tracking for this branch
 
-## Exercise 4: Merging
-
-1. Switch back to the main branch
+5. Switch back to the main branch
    ```bash
    git checkout main
    ```
 
-2. Merge the `new-feature` branch
+6. Merge your feature branch into main
    ```bash
-   git merge new-feature
+   git merge feature-branch
    ```
 
-3. Resolve any conflicts (if they occur)
-   ```bash
-   # If conflicts occur, edit the conflicted files
-   # Then stage the resolved files
-   git add <conflicted-files>
-   git commit -m "Resolve merge conflicts"
-   ```
-
-4. Push to GitHub
+7. Push the merged changes to GitHub
    ```bash
    git push origin main
    ```
 
-## Exercise 5: Collaboration (Group Exercise)
+## Exercise 4: Collaboration (Group Exercise)
 
-This is the most important for teams collaborating on a single project repository. When everything is completed each member of the team can have their own copy on github as a personal project.
+This is important for teams collaborating on a single project repository. When everything is completed, each team member can have their own copy on GitHub as a personal project.
 
 1. Clone a classmate's repository
    ```bash
    git clone https://github.com/classmate-username/repository-name.git
    cd repository-name
+   
+   # Open the project in VS Code
+   code .
    ```
 
 2. Create a new branch with your name
@@ -133,8 +124,7 @@ This is the most important for teams collaborating on a single project repositor
 
 3. Add a file called `feedback.md` with positive feedback formatted with headings and lists
    ```bash
-   # Create and edit the file
-   nano feedback.md
+   # Create and edit the file in VS Code
    ```
 
 4. Commit and push your branch
@@ -151,12 +141,12 @@ This is the most important for teams collaborating on a single project repositor
    # Click "Create pull request"
    ```
 
-## Exercise 6: Undo Changes
+## Exercise 5: Undo Changes
 
 1. Make a change to a file that you want to undo
    ```bash
-   # Edit a file
-   nano about_me.md
+   # Edit a file in VS Code
+   code about_me.md
    ```
 
 2. Use `git restore` to undo the change
@@ -171,8 +161,8 @@ This is the most important for teams collaborating on a single project repositor
 
 3. Make and commit a different change
    ```bash
-   # Edit a file
-   nano about_me.md
+   # Edit a file in VS Code
+   code about_me.md
    
    # Stage and commit
    git add about_me.md
@@ -193,7 +183,7 @@ This is the most important for teams collaborating on a single project repositor
    git push origin main
    ```
 
-## Exercise 7: Git History
+## Exercise 6: Git History
 
 1. Use `git log` to view your commit history
    ```bash
@@ -219,8 +209,8 @@ This is the most important for teams collaborating on a single project repositor
 
 4. Create a file called `history_exploration.md` with your observations using markdown formatting
    ```bash
-   # Create and edit the file
-   nano history_exploration.md
+   # Create and edit the file in VS Code
+   code history_exploration.md
    ```
 
 5. Commit and push this file
@@ -232,258 +222,158 @@ This is the most important for teams collaborating on a single project repositor
 
 ## Arduino Project Exercises
 
-### Exercise A1: Version Control for Arduino Code
+### Exercise A1: Arduino Project Setup
 
-1. Create a new file called `blink.ino` with the basic Arduino Blink sketch
+1. Create a basic Arduino project structure
    ```bash
-   # Create the file
-   nano blink.ino
+   # Create project folders
+   mkdir -p arduino_project/src
+   cd arduino_project
+   
+   # Open the project in VS Code
+   code .
    ```
 
-2. Create a `README.md` file describing what the sketch does
+2. Create a basic Arduino sketch for blinking an LED
    ```bash
-   # Create the file
-   nano README.md
+   # In VS Code, create a new file in the src folder named blink.ino
+   # Add the standard blink sketch
    ```
 
-3. Stage and commit both files
+3. Create a `README.md` file describing your project
    ```bash
-   git add blink.ino README.md
-   git commit -m "Add Blink sketch with documentation"
+   # In VS Code, create README.md in the root of your project
    ```
 
-4. Modify the delay times and add comments
+4. Initialize Git and make your first commit
    ```bash
-   # Edit the file
-   nano blink.ino
+   git init
+   git add .
+   git commit -m "Initial project setup with LED blink sketch"
    ```
 
-5. Update the README.md to reflect the changes
+5. Create a repository on GitHub and link your local repository
    ```bash
-   # Edit the file
-   nano README.md
+   # After creating the repository on GitHub, connect your local repo
+   git remote add origin https://github.com/yourusername/arduino_project.git
+   git push -u origin main
    ```
 
-6. Commit these changes with a descriptive message
-   ```bash
-   git add blink.ino README.md
-   git commit -m "Adjust blink timing and improve documentation"
-   ```
+### Exercise A2: Working with Branches for Feature Development
 
-7. Push to GitHub
-   ```bash
-   git push origin main
-   ```
-
-### Exercise A2: Feature Branching for Arduino
-
-1. Create a branch called `ultrasonic-feature`
+1. Create a feature branch for adding an ultrasonic sensor to your project
    ```bash
    git checkout -b ultrasonic-feature
    ```
 
-2. Create a new file `ultrasonic.ino` with the code for an ultrasonic sensor
+2. Add code and documentation for the ultrasonic sensor
    ```bash
-   # Create the file
-   nano ultrasonic.ino
+   # In VS Code, create a file in the src folder called ultrasonic.ino
+   # Also create a markdown file called ULTRASONIC.md with documentation
    ```
 
-3. Add documentation in a markdown file called `ultrasonic.md`
+3. Commit your changes
    ```bash
-   # Create the file
-   nano ultrasonic.md
-   ```
-
-4. Commit these files
-   ```bash
-   git add ultrasonic.ino ultrasonic.md
+   git add .
    git commit -m "Add ultrasonic sensor functionality"
    ```
 
-5. Switch back to main and create another branch called `led-feature`
+4. Switch back to main and merge your feature
    ```bash
    git checkout main
-   git checkout -b led-feature
-   ```
-
-6. Add `led_control.ino` with code for controlling multiple LEDs
-   ```bash
-   # Create the file
-   nano led_control.ino
-   ```
-
-7. Add documentation in a markdown file called `led_control.md`
-   ```bash
-   # Create the file
-   nano led_control.md
-   ```
-
-8. Commit these files
-   ```bash
-   git add led_control.ino led_control.md
-   git commit -m "Add LED control functionality"
-   ```
-
-9. Merge both feature branches into main (resolve any conflicts)
-   ```bash
-   git checkout main
-   
-   # First merge
    git merge ultrasonic-feature
-   
-   # Second merge (might have conflicts)
-   git merge led-feature
-   
-   # If conflicts occur:
-   # Edit conflicted files
-   git add <conflicted-files>
-   git commit -m "Resolve merge conflicts between features"
    ```
 
-10. Push all branches to GitHub
-    ```bash
-    git push origin main
-    git push origin ultrasonic-feature
-    git push origin led-feature
-    ```
-
-### Exercise A3: Documentation Updates
-
-1. Create a `HARDWARE.md` file listing all components needed for your Arduino project using markdown tables
-   ```bash
-   # Create the file
-   nano HARDWARE.md
-   ```
-
-2. Create a `SETUP.md` file with setup instructions including images if possible
-   ```bash
-   # Create the file
-   nano SETUP.md
-   ```
-
-3. Add both files to Git, commit with a message about improving documentation
-   ```bash
-   git add HARDWARE.md SETUP.md
-   git commit -m "Add hardware list and setup instructions"
-   ```
-
-4. Push to GitHub
+5. Push all changes to GitHub
    ```bash
    git push origin main
    ```
 
-### Exercise A4: Iterative Development
+### Exercise A3: Documenting Your Arduino Project
 
-1. Start with the basic data logger code from the sample project
+1. Create comprehensive documentation for your project
    ```bash
-   # Copy the sample code
-   cp templates/sample_project/datalogger.ino ./my_datalogger.ino
+   # In VS Code, edit or create these files:
+   code README.md         # Main project documentation
+   code HARDWARE.md       # Hardware components list
+   code SETUP.md          # Setup instructions
    ```
 
-2. Create a branch called `optimization`
-   ```bash
-   git checkout -b optimization
-   ```
+2. Use markdown features effectively:
+   - Include a table of pin connections
+   - Add code blocks with Arduino syntax highlighting
+   - Use lists and headings for clear organization
+   - Add links to relevant resources
 
-3. Modify the code to take readings every 1 second instead of 0.5 seconds
+3. Commit your documentation
    ```bash
-   # Edit the file
-   nano my_datalogger.ino
-   
-   # Change the delay(500); line to delay(1000);
-   ```
-
-4. Create or update documentation to reflect the change
-   ```bash
-   # Create or edit a documentation file
-   nano datalogger_readme.md
-   ```
-
-5. Commit these changes
-   ```bash
-   git add my_datalogger.ino datalogger_readme.md
-   git commit -m "Increase sampling interval to 1 second"
-   ```
-
-6. Make another improvement (your choice) and commit it
-   ```bash
-   # Edit the file
-   nano my_datalogger.ino
-   
-   # Make your improvements
-   git add my_datalogger.ino
-   git commit -m "Add battery-saving optimization"
-   ```
-
-7. Merge back to main when satisfied with your optimizations
-   ```bash
-   git checkout main
-   git merge optimization
-   ```
-
-8. Push all changes to GitHub
-   ```bash
+   git add *.md
+   git commit -m "Add comprehensive project documentation"
    git push origin main
-   git push origin optimization
+   ```
+
+### Exercise A4: Data Logger Project
+
+1. Create a data logger based on our example
+   ```bash
+   # Copy the sample files to your project
+   cp -r ../templates/sample_project/datalogger.ino ./src/
+   
+   # Open the project in VS Code
+   code .
+   ```
+
+2. Modify the data logger to suit your needs
+   ```bash
+   # Edit the data logger code in VS Code
+   # For example, change the sampling rate or add new features
+   ```
+
+3. Document your changes
+   ```bash
+   # Update or create documentation in VS Code
+   code README.md
+   ```
+
+4. Commit and push your changes
+   ```bash
+   git add .
+   git commit -m "Customize data logger for my project"
+   git push origin main
    ```
 
 ### Exercise A5: Data Analysis with Python
 
-1. Create a branch called `data-analysis`
+1. Add a Python script for analyzing your Arduino data
    ```bash
-   git checkout -b data-analysis
-   ```
-
-2. Add a Python script called `analyze_data.py` that:
-   - Reads data from a CSV file collected by your Arduino
-   - Creates visualizations of the data
-   - Calculates basic statistics
-   ```bash
-   # Create the file
-   nano analyze_data.py
+   # Create a directory for your analysis code
+   mkdir -p analysis
    
-   # Or copy the example
-   cp examples/analyze_data_example.py ./analyze_data.py
-   ```
-
-3. Add a `ANALYSIS.md` file documenting how to use the script and explaining the results
-   ```bash
-   # Create the file
-   nano ANALYSIS.md
+   # Create a Python script in VS Code
+   code analysis/analyze_data.py
    
-   # Or copy the example
-   cp examples/ANALYSIS_example.md ./ANALYSIS.md
+   # You can start with our example
+   cp ../examples/analyze_data_example.py ./analysis/analyze_data.py
    ```
 
-4. Commit both files
+2. Create documentation for your analysis
    ```bash
-   git add analyze_data.py ANALYSIS.md
-   git commit -m "Add data analysis tools and documentation"
+   # In VS Code, create an analysis README
+   code analysis/README.md
    ```
 
-5. Test with sample data and improve the script as needed
+3. Test your analysis with sample data
    ```bash
-   # Create some test data if needed
-   # Make improvements to the script
-   nano analyze_data.py
+   # Create or obtain sample data
+   # Run your script to test it
+   python analysis/analyze_data.py sample_data.csv
    ```
 
-6. Make additional commits with your improvements
+4. Commit and push your analysis code
    ```bash
-   git add analyze_data.py
-   git commit -m "Improve chart visualization"
-   ```
-
-7. Merge back to main when satisfied
-   ```bash
-   git checkout main
-   git merge data-analysis
-   ```
-
-8. Push all changes to GitHub
-   ```bash
+   git add analysis
+   git commit -m "Add data analysis tools"
    git push origin main
-   git push origin data-analysis
    ```
 
 ## Submit Your Work
