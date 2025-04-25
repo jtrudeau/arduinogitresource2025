@@ -1,8 +1,8 @@
 # Project Title
 
-A brief description of what this project does and who it's for.
+A brief description of what this project does.
 
-## Features
+## Overview and Features
 
 - Feature 1
 - Feature 2
@@ -13,27 +13,17 @@ A brief description of what this project does and who it's for.
 ### Prerequisites
 
 - List prerequisites here
-- For example: Node.js, Python, etc.
+- For example: Arduino IDE, Python, etc.
 
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/username/project.git
+# Clone the repository. Replace <project> with repo name.
+git clone https://github.com/username/<project>.git
 
 # Navigate to project directory
 cd project
 
-# Install dependencies (if applicable)
-npm install
-```
-
-## Usage
-
-```bash
-# Example command
-node index.js
-```
 
 Include screenshots if applicable.
 
@@ -42,21 +32,19 @@ Include screenshots if applicable.
 ```
 project/
 │
-├── src/             # Source files
-├── docs/            # Documentation files
-├── tests/           # Test files
+├── docs/            # Additional Documentation files
+├── tests/           # Test files if applicable
 ├── .gitignore       # Git ignore file
-├── README.md        # This file
-└── LICENSE          # License file
+└── README.md        # This file
 ```
 
 ## Contributing
 
-Instructions for how to contribute to this project.
+Instructions for how to contribute to this project if applicable when working on a team!
 
 ## License
 
-This project is licensed under the [LICENSE NAME] - see the LICENSE file for details.
+This project is licensed under the MIT License.
 
 ## Acknowledgments
 
