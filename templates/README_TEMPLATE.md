@@ -32,7 +32,7 @@ Include screenshots if applicable.
 ```
 project/
 │
-├── docs/            # Additional Documentation files
+├── docs/            # Additional documentation files if applicable
 ├── tests/           # Test files if applicable
 ├── .gitignore       # Git ignore file
 └── README.md        # This file
